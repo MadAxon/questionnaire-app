@@ -8,18 +8,28 @@
 
 ## Требования
 
-- **Java:** JDK 17 или новее.
+- **Java:** JDK 17 или новее (для локального запуска).
+- **Docker & Docker Compose:** для контейнеризированного запуска.
 
 ---
 
 ## Быстрый запуск
 
-### Вариант 1. Через Gradle
+### Вариант 1. Запуск через Docker Compose (Рекомендуемый)
+```bash
+docker compose up --build
+```
+или в фоновом режиме:
+```bash
+docker compose up --build -d
+```
+
+### Вариант 2. Через Gradle
 ```cmd
 gradlew.bat bootRun
 ```
 
-### Вариант 2. Запуск готового JAR
+### Вариант 3. Запуск готового JAR
 ```cmd
 gradlew.bat bootJar
 java -jar build\libs\questionnaire-app-0.0.1-SNAPSHOT.jar
