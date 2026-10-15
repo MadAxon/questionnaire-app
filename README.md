@@ -43,6 +43,11 @@ java -jar build\libs\questionnaire-app-0.0.1-SNAPSHOT.jar
 После запуска откройте в браузере:
 👉 **http://localhost:8080**
 
+Или проверьте работу эндпоинта через curl:
+```bash
+curl http://localhost:8080/questions
+```
+
 ---
 
 ## Тестирование и перезапуск
