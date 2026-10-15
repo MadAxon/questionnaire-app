@@ -22,6 +22,9 @@ RUN ./gradlew bootJar -x test --no-daemon
 FROM eclipse-temurin:17-jre-jammy
 WORKDIR /app
 
+# Устанавливаем curl для healthcheck
+RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
+
 # Создаем непривилегированного пользователя для безопасности
 RUN groupadd -r spring && useradd -r -g spring spring
 USER spring:spring
@@ -31,6 +34,10 @@ COPY --from=builder /app/build/libs/questionnaire-app-0.0.1-SNAPSHOT.jar app.jar
 
 # Порт приложения
 EXPOSE 8080
+
+# Проверка доступности GET /questions (Healthcheck)
+HEALTHCHECK --interval=10s --timeout=5s --start-period=20s --retries=3 \
+  CMD curl -f http://localhost:8080/questions || exit 1
 
 # Запуск приложения
 ENTRYPOINT ["java", "-jar", "app.jar"]
