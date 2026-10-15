@@ -24,6 +24,11 @@ docker compose up --build
 docker compose up --build -d
 ```
 
+Для остановки сервера и контейнера:
+```bash
+docker compose down
+```
+
 ### Вариант 2. Через Gradle
 ```cmd
 gradlew.bat bootRun
