@@ -74,3 +74,15 @@ restart_server.bat
 - **`GET /questions`** — список предустановленных вопросов (JSON).
 - **`POST /answers`** — сохранение ответа пользователя в памяти (тело: `{"questionId": 1, "answer": "...", "sessionId": "..."}`).
 - **`GET /answers`** — просмотр всех сохранённых ответов в памяти.
+
+---
+
+## Скриншоты
+
+- [Экран вопроса (2026-10-13_19-39-16.png)](https://github.com/MadAxon/questionnaire-app/blob/main/screenshots/2026-10-13_19-39-16.png)
+
+  [![Экран вопроса](https://raw.githubusercontent.com/MadAxon/questionnaire-app/main/screenshots/2026-10-13_19-39-16.png)](https://github.com/MadAxon/questionnaire-app/blob/main/screenshots/2026-10-13_19-39-16.png)
+
+- [Финальный экран «Спасибо!» (2026-10-13_19-38-29.png)](https://github.com/MadAxon/questionnaire-app/blob/main/screenshots/2026-10-13_19-38-29.png)
+
+  [![Финальный экран](https://raw.githubusercontent.com/MadAxon/questionnaire-app/main/screenshots/2026-10-13_19-38-29.png)](https://github.com/MadAxon/questionnaire-app/blob/main/screenshots/2026-10-13_19-38-29.png)
